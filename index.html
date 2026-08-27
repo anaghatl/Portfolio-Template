@@ -3,54 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Portfolio Template</title>
+  <title>Interactive Portfolio Builder</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>John Doe</h1>
-    <p>Engineering Student | Software Developer</p>
+  <header class="app-header">
+    <h1>🚀 Dynamic Portfolio Builder</h1>
+    <p>Fill out the form below to instantly generate and customize your developer portfolio.</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Passionate developer specializing in web development, data structures, and problem-solving.</p>
-  </section>
+  <main class="builder-container">
+    <!-- FORM SIDEBAR -->
+    <section class="form-section">
+      <h2>1. Enter Your Info</h2>
+      <form id="portfolio-form">
+        <label>Full Name</label>
+        <input type="text" id="in-name" placeholder="e.g. Anagha T L">
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C++ / Data Structures</li>
-      <li>HTML5 & CSS3</li>
-      <li>JavaScript</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+        <label>Professional Tagline</label>
+        <input type="text" id="in-tagline" placeholder="e.g. Engineering Student | Software Developer">
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <article>
-      <h3>Project Title</h3>
-      <p>A brief description of what the project does and the tech stack used.</p>
-    </article>
-  </section>
+        <label>About Me</label>
+        <textarea id="in-about" rows="3" placeholder="Write a short bio..."></textarea>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <label>Name:</label><br>
-      <input type="text" placeholder="Your Name" required><br><br>
-      
-      <label>Email:</label><br>
-      <input type="email" placeholder="Your Email" required><br><br>
-      
-      <label>Message:</label><br>
-      <textarea rows="4" placeholder="Your Message" required></textarea><br><br>
-      
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        <label>Skills (comma separated)</label>
+        <input type="text" id="in-skills" placeholder="e.g. C++, HTML, CSS, JavaScript, Git">
 
+        <label>Featured Project Name</label>
+        <input type="text" id="in-project-title" placeholder="e.g. MedVision AI">
+
+        <label>Project Description</label>
+        <textarea id="in-project-desc" rows="3" placeholder="Describe what you built..."></textarea>
+
+        <label>Email Address</label>
+        <input type="email" id="in-email" placeholder="e.g. student@example.com">
+      </form>
+      <button id="download-btn" onclick="window.print()">🖨️ Save / Print as PDF</button>
+    </section>
+
+    <!-- LIVE PREVIEW CANVAS -->
+    <section class="preview-section">
+      <h2>2. Live Preview</h2>
+      <div id="portfolio-preview" class="preview-card">
+        <header class="pv-header">
+          <h1 id="out-name">Anagha T L</h1>
+          <p id="out-tagline">Engineering Student | Software Developer</p>
+        </header>
+
+        <div class="pv-body">
+          <section>
+            <h3>About Me</h3>
+            <p id="out-about">Passionate developer focused on building functional software solutions and exploring web technologies.</p>
+          </section>
+
+          <section>
+            <h3>Skills</h3>
+            <div id="out-skills" class="skills-tags">
+              <span class="tag">C++</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </section>
+
+          <section>
+            <h3>Featured Project</h3>
+            <div class="project-box">
+              <h4 id="out-project-title">MedVision AI</h4>
+              <p id="out-project-desc">A healthcare platform using AI to assist in medical imaging analysis.</p>
+            </div>
+          </section>
+
+          <section>
+            <h3>Contact</h3>
+            <p>Email me at: <strong id="out-email">anagha@example.com</strong></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
