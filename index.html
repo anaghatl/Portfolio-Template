@@ -19,25 +19,25 @@
       <h2>1. Enter Your Info</h2>
       <form id="portfolio-form">
         <label>Full Name</label>
-        <input type="text" id="in-name" placeholder="e.g. Anagha T L">
+        <input type="text" id="in-name" placeholder="e.g. Alex Morgan">
 
         <label>Professional Tagline</label>
-        <input type="text" id="in-tagline" placeholder="e.g. Engineering Student | Software Developer">
+        <input type="text" id="in-tagline" placeholder="e.g. Full-Stack Developer | CS Student">
 
         <label>About Me</label>
-        <textarea id="in-about" rows="3" placeholder="Write a short bio..."></textarea>
+        <textarea id="in-about" rows="3" placeholder="Write a short summary of your background and interests..."></textarea>
 
         <label>Skills (comma separated)</label>
-        <input type="text" id="in-skills" placeholder="e.g. C++, HTML, CSS, JavaScript, Git">
+        <input type="text" id="in-skills" placeholder="e.g. Python, React, Node.js, SQL, Git">
 
         <label>Featured Project Name</label>
-        <input type="text" id="in-project-title" placeholder="e.g. MedVision AI">
+        <input type="text" id="in-project-title" placeholder="e.g. Task Flow Dashboard">
 
         <label>Project Description</label>
-        <textarea id="in-project-desc" rows="3" placeholder="Describe what you built..."></textarea>
+        <textarea id="in-project-desc" rows="3" placeholder="Describe key features, target users, and technologies used..."></textarea>
 
         <label>Email Address</label>
-        <input type="email" id="in-email" placeholder="e.g. student@example.com">
+        <input type="email" id="in-email" placeholder="e.g. alex.morgan@example.com">
       </form>
       <button id="download-btn" onclick="window.print()">🖨️ Save / Print as PDF</button>
     </section>
@@ -47,36 +47,37 @@
       <h2>2. Live Preview</h2>
       <div id="portfolio-preview" class="preview-card">
         <header class="pv-header">
-          <h1 id="out-name">Anagha T L</h1>
-          <p id="out-tagline">Engineering Student | Software Developer</p>
+          <h1 id="out-name">Alex Morgan</h1>
+          <p id="out-tagline">Full-Stack Developer | Computer Science Student</p>
         </header>
 
         <div class="pv-body">
           <section>
             <h3>About Me</h3>
-            <p id="out-about">Passionate developer focused on building functional software solutions and exploring web technologies.</p>
+            <p id="out-about">Passionate software developer dedicated to building clean, scalable web applications and solving complex algorithmic challenges.</p>
           </section>
 
           <section>
             <h3>Skills</h3>
             <div id="out-skills" class="skills-tags">
-              <span class="tag">C++</span>
-              <span class="tag">HTML/CSS</span>
               <span class="tag">JavaScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">React</span>
+              <span class="tag">Git</span>
             </div>
           </section>
 
           <section>
             <h3>Featured Project</h3>
             <div class="project-box">
-              <h4 id="out-project-title">MedVision AI</h4>
-              <p id="out-project-desc">A healthcare platform using AI to assist in medical imaging analysis.</p>
+              <h4 id="out-project-title">Smart Task Manager</h4>
+              <p id="out-project-desc">A responsive web application designed to track personal goals, manage daily workflows, and optimize daily productivity.</p>
             </div>
           </section>
 
           <section>
             <h3>Contact</h3>
-            <p>Email me at: <strong id="out-email">anagha@example.com</strong></p>
+            <p>Email me at: <strong id="out-email">alex.morgan@example.com</strong></p>
           </section>
         </div>
       </div>
