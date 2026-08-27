@@ -8,13 +8,13 @@ function bindInput(inputId, outputId, defaultValue) {
   });
 }
 
-// Simple Text Bindings
-bindInput('in-name', 'out-name', 'Anagha T L');
-bindInput('in-tagline', 'out-tagline', 'Engineering Student | Software Developer');
-bindInput('in-about', 'out-about', 'Passionate developer focused on building functional software solutions.');
-bindInput('in-project-title', 'out-project-title', 'MedVision AI');
-bindInput('in-project-desc', 'out-project-desc', 'A healthcare platform using AI to assist in medical imaging analysis.');
-bindInput('in-email', 'out-email', 'anagha@example.com');
+// Neutral Fallback Values
+bindInput('in-name', 'out-name', 'Alex Morgan');
+bindInput('in-tagline', 'out-tagline', 'Full-Stack Developer | Computer Science Student');
+bindInput('in-about', 'out-about', 'Passionate software developer dedicated to building clean, scalable web applications and solving complex algorithmic challenges.');
+bindInput('in-project-title', 'out-project-title', 'Smart Task Manager');
+bindInput('in-project-desc', 'out-project-desc', 'A responsive web application designed to track personal goals, manage daily workflows, and optimize daily productivity.');
+bindInput('in-email', 'out-email', 'alex.morgan@example.com');
 
 // Dynamic Skills Tag Generator
 const skillsInput = document.getElementById('in-skills');
@@ -25,9 +25,10 @@ skillsInput.addEventListener('input', () => {
   
   if (skillsArray.length === 0) {
     skillsOutput.innerHTML = `
-      <span class="tag">C++</span>
-      <span class="tag">HTML/CSS</span>
       <span class="tag">JavaScript</span>
+      <span class="tag">Python</span>
+      <span class="tag">React</span>
+      <span class="tag">Git</span>
     `;
     return;
   }
